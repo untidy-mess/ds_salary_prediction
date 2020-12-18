@@ -4,6 +4,9 @@ Created on Thu Dec 17 08:18:36 2020
 
 @author: Arnab Wahid
 """
+# This scraper was forked from:
+# author: Kenarapfaik
+# url: https://github.com/arapfaik/scraping-glassdoor-selenium
 
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 from selenium import webdriver
