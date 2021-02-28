@@ -14,8 +14,7 @@ df = pd.read_csv('eda_data.csv')
 # choose relevant columns 
 df.columns
 
-df_model = df[['avg_salary','Rating','Size','Type of ownership','Industry','Sector','Revenue','num_comp','hourly','employer_provided',
-             'job_state','same_state','age','python_yn','spark','aws','excel','job_simp','seniority','desc_len']]
+df_model = df[['avg_salary','Rating','Size','Type of ownership','Industry','Sector','Revenue','num_comp','hourly','employer_provided','job_state','same_state','age','python_yn','spark','aws','excel','job_simp','seniority','desc_len']]
 
 # get dummy data 
 df_dum = pd.get_dummies(df_model)
@@ -89,3 +88,16 @@ mean_absolute_error(y_test,tpred_lml)
 mean_absolute_error(y_test,tpred_rf)
 
 mean_absolute_error(y_test,(tpred_lm+tpred_rf)/2)
+
+import pickle
+pickl = {'model': gs.best_estimator_}
+pickle.dump( pickl, open( 'model_file' + ".p", "wb" ) )
+
+file_name = "model_file.p"
+with open(file_name, 'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+
+model.predict(np.array(list(X_test.iloc[1,:])).reshape(1,-1))[0]
+
+list(X_test.iloc[1,:])
