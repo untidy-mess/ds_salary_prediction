@@ -55,10 +55,10 @@ After scraping the data, I needed to clean it up so that it was usable for our m
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-![alt text](https://github.com/arnabwahid/ds_salary_proj/blob/master/.docs/salary_by_title.PNG "Salary by Position")
-![alt text](https://github.com/arnabwahid/ds_salary_proj/blob/master/.docs/salary-by-sector.png "Job Opportunities by Sector")
-![alt text](https://github.com/arnabwahid/ds_salary_proj/blob/master/.docs/correlation_visual.png "Correlations")
-![alt text](https://github.com/arnabwahid/ds_salary_proj/blob/master/.docs/wordcloud.png "Job Description Wordcloud")
+![alt text](docs/salary_by_title.PNG "Salary by Position")
+![alt text](docs/salary-by-sector.png "Job Opportunities by Sector")
+![alt text](https://github.com/arnabwahid/ds_salary_pred/blob/master/.docs/correlation_visual.png "Correlations")
+![alt text](docs/wordcloud.png "Job Description Wordcloud")
 
 ## Model Building 
 
@@ -78,7 +78,6 @@ The Random Forest model far outperformed the other approaches on the test and va
 *	**Ridge Regression**: MAE = 19.67
 
 ## Productionization 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
+`under development`
 
-
-
+In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
